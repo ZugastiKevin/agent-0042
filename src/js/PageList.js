@@ -24,7 +24,7 @@ const PageList = (argument = "") => {
                     article.background_image
                   }" alt="">
                   <h3>${article.name}</h3>
-                  ${storeSlug(article.platforms)}
+                  ${storeSlug(article.parent_platforms)}
                 </div>
               </a>
             `;

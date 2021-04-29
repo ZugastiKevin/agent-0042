@@ -3,14 +3,14 @@ const Home = () => {
   const innerShow = () => {
     let innerShows = document.getElementById("innerShow");
     innerShows.innerHTML = `
-      <button class="btn btn-red itsDisplayed centering">Show More</button>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-red itsDisplayed centering">Show More</a>
     `;
   };
 
   const innerPlatform = () => {
     let innerPlatforms = document.getElementById("innerPlatform");
     innerPlatforms.innerHTML = `
-      <button class="btn btn-red itsDisplayed">Platform : any ↕</button>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-red itsDisplayed">Platform : any ↕</a>
     `;
   };
 

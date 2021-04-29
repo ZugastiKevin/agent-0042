@@ -105,20 +105,28 @@ body {
 .logo {
   width: 4%;
   margin-right: 15px;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(317deg) brightness(107%) contrast(101%);
 }
 
 .logostores {
-  width: 20px;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(317deg) brightness(107%) contrast(101%);
+  height: 20px;
 }
 
-#search {
-  padding:5px 30px;
+#btnSearch, #search {
+  background: transparent;
+  border: transparent;
+  color: #ffffff;
+  &:focus-visible{
+    outline: none;
+  }
+}
+
+form {
+  padding: 5px 10px;
   border-radius: 20px;
   background-color: #191919;
   color: #ffffff;
   width: 350px;
+  border: 1px solid grey;
 }
 
 h2 {
