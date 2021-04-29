@@ -11,12 +11,40 @@
 </head>
 
 <body>
-  <a href="#">Home</a>
-  <a href="#pagelist">PageList</a>
-  <a href="#pagelist/borderlands">PageList borderlands</a>
+  <div class="container">
+    <header>
+      <div id="innerHeader" class="header-bar">
+        <div id="title-home">
+          <div id="backHome">
+            <a href="#">
+              <h1>The Hyper Progame</h1>
+            </a>
+          </div>
+        </div>
+        <div class="search-bar">
+          <form>
+            <input type="text" name="search" id="search" placeholder="Find a game...">
+            <button id="btnSearch" type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </header>
 
-  <section id="pageContent">Choisissez un lien</section>
-  
+    <div id="innerText" class="syno-bar"></div>
+
+    <div id="innerPlatform" class="link-bar"></div>
+
+    <div id="pageContent" class="content-bar"></div>
+
+    <div id="innerShow" class="show-bar"></div>
+
+    <footer>
+      <div id="innerFooter" class="footer-bar">
+        <div class="footer-div"></div>
+        <p id="footer-text">Hell Agent-0042 @ 2020 - Fictionnal website for exercice</p>
+      </div>
+    </footer>
+  </div>
   <script src="./dist/bundle.js"></script>
 </body>
 
