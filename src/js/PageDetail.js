@@ -173,3 +173,90 @@ const PageDetail = (argument) => {
 
 
 export { PageDetail };
+
+/*
+// fetch pour the most similar Game
+          fetch(`https://api.rawg.io/api/genres?key=${process.env.API_KEY}`)
+            .then((response) => response.json())
+            .then((response) => {
+              let MostSimilarGame = [];
+              let score = 1;
+
+              genres.forEach((x) => {
+                response.results.forEach((genre) => {
+                  if (genre.name === x.name) {
+                    genre.games.forEach((z) => {
+                      if (MostSimilarGame.length === 0) {
+                        MostSimilarGame.push([z.name, score, z.id]);
+                      } else {
+                        let verifyIfAlreadyExist = false;
+                        for (let i = 0; i < MostSimilarGame.length; i++)
+                          if (MostSimilarGame[i][0].includes(z.name)) {
+                            MostSimilarGame[i][1] += 1;
+                            verifyIfAlreadyExist = true;
+                          }
+                        if (verifyIfAlreadyExist === false) {
+                          MostSimilarGame.push([z.name, score, z.id]);
+                        }
+                      }
+                    });
+                  }
+                });
+              });
+              MostSimilarGame.sort(function (a, b) {
+                return b[1] - a[1];
+              });
+
+              MostSimilarGame.forEach((game) => {
+                if (game[0] != name) {
+                  fetch(
+                    `https://api.rawg.io/api/games/${game[2]}?key=${process.env.API_KEY}`
+                  )
+                    .then((response) => response.json())
+                    .then((response) => {
+                      let tabPlatform = [];
+                      let kindOfGame = [];
+
+                      response.genres.forEach((genre) => {
+                        kindOfGame.push(genre.name);
+                      });
+
+                      response.platforms.forEach((x) => {
+                        tabPlatform.push(x.platform.name);
+                      });
+
+                      document.querySelector(
+                        ".articles"
+                      ).innerHTML += `<article>
+                      <a href = "#pagedetail/${response.id}">
+                     <div class="imageCardPageList">
+                     
+                     <img src="${response.background_image}">
+                     
+                     <div class="cardDetailList">
+                     <span>${response.released}</span>
+                     <span>Developed by </span>
+                     <span>${kindOfGame.join(", ")}</span>
+                     <span><span class="bigger">${
+                       response.rating
+                     }</span> Votes ${response.ratings_count}</span>
+                     
+                     
+                     </div>
+                     </div>
+                     </a>
+                     
+                     <div class="cardGame">
+                     <a href = "#pagedetail/${response.id}">
+                     <h3>${response.name} </h3>
+                     </a>
+                     <span class="platformGame">${tabPlatform.join(" ")}</span>
+                    </div>
+                    
+                </article>
+                `;
+                    });
+                }
+              });
+            });
+*/
